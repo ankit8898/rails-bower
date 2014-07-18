@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title ChartPlotter
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body{"ng-app" => "ChartPlotter"}
+    %ul.nav.nav-tabs{role: "tablist"}
+      %li.active
+        %a{href: "/"} Home
+      %li
+        %a{href: "/users"} Users
+      %li
+        %a{href: "/activities"} Activities	    
+    = yield
